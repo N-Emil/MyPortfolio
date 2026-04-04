@@ -1,26 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import logo from '../assets/logo.png'
 import { buttons } from '../data/NavbarElements'
+import useTime from '../hooks/useTime'
 
 const Navbar = () => {
-    const [time, setTime] = useState(new Date())
+    const time = useTime()
     const [menuOpen, setMenuOpen] = useState(false)
-
-    const style = `text-slate-300 hover:text-white hover:bg-indigo-500 cursor-pointer px-3 py-2 rounded-md transition-all duration-300`
-
-    useEffect(() => {
-        const timer = setInterval(() => setTime(new Date(), 1000))
-        return () => clearInterval(timer)
-    }, [])
-
-    const formatTime = (date) => {
-        return date.toLocaleTimeString('az-AZ', {
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false
-        })
-    }
+    const style = `text-slate-300 hover:text-white hover:bg-indigo-500 cursor-pointer px-3 py-2 rounded-md 
+    transition-all duration-300`
 
     return (
         <nav className='sticky top-0 z-[1000] bg-[#1E293B] w-full'>
@@ -39,7 +26,7 @@ const Navbar = () => {
 
                 <div className='flex items-center gap-2'>
                     <div className='text-[#C27803] font-mono text-xs sm:text-sm md:text-lg font-bold tracking-tighter whitespace-nowrap'>
-                        {formatTime(time)}
+                        {time}
                     </div>
                     <button
                         className='md:hidden text-slate-300 hover:text-white border border-slate-500 px-3 py-2 rounded-md'

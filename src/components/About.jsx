@@ -1,4 +1,4 @@
-import { content } from "../data/AboutContent"
+import { buttons, content } from "../data/AboutContent"
 import Headers from "./Headers"
 
 const About = () => {
@@ -16,9 +16,16 @@ const About = () => {
               <h1 className="font-bold text-2xl">{c.user}</h1>
               <p className="font-medium text-xl text-[#CD7F32]">{c.role}</p>
               <p className="text-slate-400 leading-relaxed max-w-md break-words">{c.description}</p>
-              <a href="/Emil_cv.pdf" download="Emil_cv.pdf" className="mt-4">
-                <button className="bg-[#C27803] hover:bg-[#E28D04] text-white px-5 py-2 rounded-lg transition-all duration-300 cursor-pointer">Download CV</button>
-              </a>
+              <div className="flex items-center gap-4 mt-4">
+                {buttons.map(button => (
+                  <a key={button.id} href="/Emil_cv.pdf" download={button.download} target="_blank">
+                    <button className="bg-[#C27803] hover:bg-[#E28D04] text-white px-5 py-2 rounded-lg transition-all duration-300 cursor-pointer">
+                      {button.title}
+                    </button>
+                  </a>
+                ))}
+
+              </div>
             </div>
           ))}
         </div>

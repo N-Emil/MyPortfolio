@@ -22,7 +22,7 @@ const Projects = () => {
                                 <p className='text-slate-400 leading-relaxed max-w-sm break-words text-center'>{project.description}</p>
                                 <a href={project.app_url} className='underline text-[#38BDF8]' target='_blank' rel='noreferrer'>Project link</a>
                                 <a href={project.github_url} target='_blank' rel='noreferrer'>
-                                    <button className='flex items-center gap-3 bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-md w-full justify-center'>
+                                    <button className='flex items-center justify-center gap-3 cursor-pointer bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-md w-full'>
                                         <p>Source code</p>
                                         <div className='border rounded-full p-1 bg-white text-blue-500'>
                                             <FaArrowRight />

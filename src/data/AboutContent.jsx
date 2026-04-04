@@ -11,3 +11,8 @@ export const content = [
         cv: ''
     }
 ]
+
+export const buttons = [
+    { id: 1, title: 'Download CV', download: 'Emil_cv.pdf' },
+    { id: 2, title: 'Open CV' }
+]
