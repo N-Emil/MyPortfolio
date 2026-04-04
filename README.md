@@ -30,4 +30,4 @@ You can run this project locally by following these steps:
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/N-Emil/MyPortfolio.git](https://github.com/N-Emil/MyPortfolio.git)
+git clone https://github.com/N-Emil/MyPortfolio.git
