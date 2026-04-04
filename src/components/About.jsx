@@ -1,4 +1,4 @@
-import { buttons, content } from "../data/AboutContent"
+import { buttons, contents } from "../data/AboutContent"
 import Headers from "./Headers"
 
 const About = () => {
@@ -11,11 +11,11 @@ const About = () => {
             <img src="https://static.vecteezy.com/system/resources/thumbnails/048/216/761/small/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
               alt="user" className="w-24 h-24 sm:w-28 sm:h-28 object-cover" />
           </div>
-          {content.map(c => (
-            <div key={c.id} className="flex justify-center items-center flex-col gap-3 text-center px-3">
-              <h1 className="font-bold text-2xl">{c.user}</h1>
-              <p className="font-medium text-xl text-[#CD7F32]">{c.role}</p>
-              <p className="text-slate-400 leading-relaxed max-w-md break-words">{c.description}</p>
+          {contents.map(content => (
+            <div key={content.id} className="flex justify-center items-center flex-col gap-3 text-center px-3">
+              <h1 className="font-bold text-2xl">{content.user}</h1>
+              <p className="font-medium text-xl text-[#CD7F32]">{content.role}</p>
+              <p className="text-slate-400 leading-relaxed max-w-md break-words">{content.description}</p>
               <div className="flex items-center gap-4 mt-4">
                 {buttons.map(button => (
                   <a key={button.id} href="/Emil_cv.pdf" download={button.download} target="_blank">

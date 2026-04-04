@@ -1,4 +1,4 @@
-export const content = [
+export const contents = [
     {
         id: 1,
         user: 'Emil Nağıyev',
