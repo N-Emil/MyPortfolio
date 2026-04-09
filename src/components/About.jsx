@@ -1,5 +1,6 @@
 import { buttons, contents } from "../data/AboutContent"
 import Headers from "./Headers"
+import Profile from '../assets/profile.png'
 
 const About = () => {
   return (
@@ -7,10 +8,7 @@ const About = () => {
       <Headers header='About' id='about' />
       <div className="flex justify-center mt-8">
         <div className="border text-white rounded-lg flex flex-col justify-center items-center gap-8 p-6 sm:p-10 max-w-xl w-full hover:scale-105 transition-transform duration-300">
-          <div className="bg-white rounded-full p-4">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/048/216/761/small/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
-              alt="user" className="w-24 h-24 sm:w-28 sm:h-28 object-cover" />
-          </div>
+          <img src={Profile} alt="user" className="w-30 h-30 sm:w-40 sm:h-40 object-cover rounded-full" />
           {contents.map(content => (
             <div key={content.id} className="flex justify-center items-center flex-col gap-3 text-center px-3">
               <h1 className="font-bold text-2xl">{content.user}</h1>
