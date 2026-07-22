@@ -13,7 +13,7 @@ const About = () => {
             <div key={content.id} className="flex justify-center items-center flex-col gap-3 text-center px-3">
               <h1 className="font-bold text-2xl">{content.user}</h1>
               <p className="font-medium text-xl text-[#CD7F32]">{content.role}</p>
-              <p className="text-slate-400 leading-relaxed max-w-md break-words">{content.description}</p>
+              <p className="text-slate-400 leading-relaxed max-w-md break-words text-justify">{content.description}</p>
               <div className="flex items-center gap-4 mt-4">
                 {buttons.map(button => (
                   <a key={button.id} href="/NEmil_CV.pdf" download={button.download} target="_blank">
