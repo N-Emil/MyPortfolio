@@ -13,7 +13,9 @@ const Navbar = () => {
         <nav className='sticky top-0 z-[1000] bg-[#1E293B] w-full'>
             <div className='max-w-screen-xl mx-auto flex items-center justify-between h-20 px-4 sm:px-6'>
                 <div className='flex items-center gap-3'>
-                    <img src={logo} alt="logo" className='w-45 h-45' />
+                    <a href="/">
+                        <img src={logo} alt="logo" className='w-45 h-45' />
+                    </a>
                 </div>
 
                 <div className='hidden md:flex items-center gap-2 lg:gap-4'>
