@@ -52,7 +52,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-60' : 'max-h-0'}`}>
+            <div className={`md:hidden absolute top-full left-0 right-0 overflow-y-auto transition-all duration-300 ${menuOpen ? 'max-h-[calc(100vh-6.25rem)]' : 'max-h-0'}`}>
                 <div className='flex flex-col gap-2 p-4 bg-[#1E293B]'>
                     {buttons.map(btn => (
                         <a
