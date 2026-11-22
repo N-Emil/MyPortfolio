@@ -1,13 +1,13 @@
 import { buttons, contents } from "../data/AboutContent"
 import Headers from "./Headers"
-import Profile from '../assets/profile.png'
+import Profile from '../assets/profile.jpg'
 
 const About = () => {
   return (
-    <section className='px-4 py-10 sm:px-6 sm:py-14'>
+    <section className='content-section px-4 py-10 sm:px-6 sm:py-14'>
       <Headers header='About' id='about' />
       <div className="flex justify-center mt-8">
-        <div className="border text-white rounded-lg flex flex-col justify-center items-center gap-8 p-6 sm:p-10 max-w-xl w-full hover:scale-105 transition-transform duration-300">
+        <div className="scroll-reveal border text-white rounded-lg flex flex-col justify-center items-center gap-8 p-6 sm:p-10 max-w-xl w-full hover:scale-105 transition-transform duration-300">
           <img src={Profile} alt="user" className="w-30 h-30 sm:w-40 sm:h-40 object-cover rounded-full" />
           {contents.map(content => (
             <div key={content.id} className="flex justify-center items-center flex-col gap-3 text-center px-3">

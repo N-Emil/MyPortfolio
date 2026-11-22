@@ -4,14 +4,15 @@ import Headers from './Headers'
 const Skills = () => {
 
     return (
-        <section className='px-4 py-10 sm:px-6 sm:py-14'>
+        <section className='content-section px-4 py-10 sm:px-6 sm:py-14'>
             <Headers header='Skills' id='skills' />
             <div className='grid grid-cols-2 min-[420px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-6 sm:gap-8 mt-10 sm:mt-15 max-w-6xl mx-auto place-items-center'>
-                {skills.map(skill => (
+                {skills.map((skill, index) => (
                     <div
                         key={skill.id}
                         tabIndex={0}
-                        className='relative group flex justify-center items-center outline-none'
+                        className='scroll-reveal relative group flex justify-center items-center outline-none'
+                        style={{ '--reveal-delay': `${index * 90}ms` }}
                     >
                         <div className='border rounded-full bg-white p-4 group-hover:scale-120 group-focus:scale-120 group-active:scale-120 transition-transform duration-300 cursor-pointer shadow-sm'>
                             <div className={`${skill.color} text-2xl sm:text-3xl flex items-center justify-center`}>

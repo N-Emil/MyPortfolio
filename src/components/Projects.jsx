@@ -5,12 +5,12 @@ import Headers from './Headers'
 
 const Projects = () => {
     return (
-        <section className='px-4 py-10 sm:px-6 sm:py-14'>
+        <section className='content-section px-4 py-10 sm:px-6 sm:py-14'>
             <Headers header='Projects' id='projects' />
             <div className='flex justify-center mt-8'>
                 <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 text-white gap-5 w-full max-w-screen-xl'>
-                    {projects.map(project => (
-                        <div key={project.id} className='border rounded-lg text-white p-5 flex flex-col gap-6 hover:shadow-lg transition-shadow duration-300 relative h-full'>
+                    {projects.map((project, index) => (
+                        <div key={project.id} className='scroll-reveal border rounded-lg text-white p-5 flex flex-col gap-6 hover:shadow-lg transition-shadow duration-300 relative h-full' style={{ '--reveal-delay': `${index * 140}ms` }}>
                             
                             {/* Platform Tag */}
                             <div className='flex items-center justify-end w-full'>

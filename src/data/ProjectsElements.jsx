@@ -8,10 +8,10 @@ export const projects = [
         platform: 'Web',
         image: Sfera,
         title: 'Course Management System',
-        description: `A course management application where admins manage teachers, students, announcements, services, and exam 
-        results through an admin panel, including uploading mock exam results via Excel. Students can register, view results by 
-        date, and reset forgotten passwords via email.`,
-        technologies: ['Spring Boot', 'Thymeleaf', 'Spring Security', 'Spring Data JPA', 'MySQL', 'Docker', 'JavaMailSender'],
+        description: `A course management platform where administrators manage students, teachers, announcements, services 
+        and exam results through a centralized admin panel. The system also supports uploading mock exam results via Excel. 
+        Students can register, view their exam results by date, manage their profiles, and reset forgotten passwords via email.`,
+        technologies: ['Java 25', 'Spring Boot', 'Spring Security', 'Spring Data JPA', 'Hibernate', 'MySQL', 'Thymeleaf'],
         app_url: 'https://sferan1.az',
         github_url: 'https://github.com/N-Emil/Course_Management_System'
     },
